@@ -10,10 +10,10 @@ points.allowed <- c(10, 9, 18, 17)
 seahawks <- data.frame(points.scored, points.allowed)
 
 # Create a new column "diff" that is the difference in points
-seahawks$diff <- c(2, 6, 19, 10)
+seahawks$diff <- abs(points.scored-points.allowed)
 
 # Create a new column "won" which is TRUE if the Seahawks won
-seahawks$won <- c(points.scored > points.allowed)
+seahawks$won <- points.scored > points.allowed
 
 # Create a vector of the opponents
 opponents <- c("Dolphins", "Ramns", "49ers", "Jets")
